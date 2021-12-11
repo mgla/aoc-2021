@@ -49,7 +49,7 @@ for roll in rolls:
             if roll in charts[chart_num]['rows'][col_num]: # actually row num here
                 del charts[chart_num]['rows'][col_num][roll]
             # if either is empty now, we are done here
-            if len(charts[chart_num]['rows'][col_num]) == 0:
+            if len(charts[chart_num]['rows'][col_num]) == 0 or len(charts[chart_num]['cols'][col_num]) == 0:
                 print(f"board {chart_num} wins on roll {roll}")
                 # calculate score
                 print(charts[chart_num])
